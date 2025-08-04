@@ -30,7 +30,7 @@ const Filters = () => {
     >
       <Search />
       <div className="flex mr-7">
-        <form
+        {/* <form
           className="relative flex items-center font-nunito
           mr-12
           "
@@ -57,7 +57,45 @@ const Filters = () => {
           <button type="submit" className="ml-1 cursor-pointer">
             <img src={submitIcon} alt="submit" className="w-full h-auto" />
           </button>
-        </form>
+        </form> */}
+        <form
+  className="relative flex items-center font-nunito mr-12"
+  onSubmit={handleCurrencySubmit}
+>
+  <label
+    htmlFor="currency"
+    className="relative flex justify-center items-center mr-2 font-bold"
+  >
+    Currency:
+  </label>
+
+  <select
+    name="currency"
+    ref={currencyRef}
+    className="w-24 rounded bg-gray-200 pl-2 outline-0 border border-transparent 
+               focus:border-cyan leading-4"
+  >
+    <option value="USD">USD - United States</option>
+    <option value="EUR">EUR - Eurozone</option>
+    <option value="JPY">JPY - Japan</option>
+    <option value="GBP">GBP - United Kingdom</option>
+    <option value="AUD">AUD - Australia</option>
+    <option value="CAD">CAD - Canada</option>
+    <option value="CHF">CHF - Switzerland</option>
+    <option value="CNY">CNY - China</option>
+    <option value="INR">INR - India</option>
+    <option value="BRL">BRL - Brazil</option>
+    <option value="ZAR">ZAR - South Africa</option>
+    <option value="SGD">SGD - Singapore</option>
+    <option value="KRW">KRW - South Korea</option>
+    <option value="SEK">SEK - Sweden</option>
+    <option value="NZD">NZD - New Zealand</option>
+  </select>
+
+  <button type="submit" className="ml-1 cursor-pointer">
+    <img src={submitIcon} alt="submit" className="w-full h-auto" />
+  </button>
+</form>
 
         <label className="relative flex justify-center items-center">
           <span className="font-bold mr-2">sort by: </span>
