@@ -11,8 +11,8 @@ const Logo = () => {
 text-lg text-cyan flex items-center
      "
     >
-      <img src={logoSvg} alt="VickyCrypto" />
-      <span>VickyCrypto</span>
+      <img src={logoSvg} alt="Binalyze" />
+      <span>Binalyze</span>
     </Link>
   );
 };
